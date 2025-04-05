@@ -39,6 +39,7 @@ const Card=()=>{
   },[add])
   return (
       <div>
+           {/* <h1>{multiply()}</h1><br/> */}
               {multiplication}
           <br></br>
               <button onClick={handleAdd}>Add : {add}</button>
