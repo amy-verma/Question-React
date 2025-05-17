@@ -93,3 +93,33 @@ const [count, setCount] = useState(() => {
 
 
 
+<!-- import { useState } from "react";
+
+const App=()=>{
+  const [count,setCount]=useState(0)
+  const min=0;
+  const max=10;
+
+  const handleIncrement=()=>{
+    setCount((prevCount)=>prevCount < max ? prevCount+1 : prevCount )
+  }
+  const handleDecrement=()=>{
+    setCount((prevCount)=>prevCount >min ? prevCount-1 : prevCount)
+  }
+  const handlereset=()=>{
+    setCount(min)
+  }
+
+  return(
+    <div>
+      <h1>Count:{count}</h1>
+      <button onClick={handleIncrement} disabled={count===max}>Increment</button>
+      <button onClick={handleDecrement} disabled={count===min}>Increment</button>
+      <button onClick={handlereset}>Reset</button>
+      {count===max && <p style={{color:"green"}}>You have reached Maximum Number</p>}
+      {count===min && <p style={{color:"red"}}>You have reached minimum Number</p>}
+
+    </div>
+  )
+}
+export default App; -->

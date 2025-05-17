@@ -4,7 +4,9 @@
  1. Fetching data from API 
  2. Updating DOM /Manual DOM Manupulation
  3. Subscribing to or cleaning up event listners 
- 4. Managing Timers and Intervals
+ 4. Starting or clearing intervals
+
+
 
  Example- 
  useEffect(()=>{

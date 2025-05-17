@@ -1,7 +1,7 @@
 // 1. What is useReducer and how does it differ from useState?
 // - It is a react hook used for state management
 // - Alternative of useState hook,especially when state logic is complex or involves multiple transition
-// - unlike use state, which directly updates the state, useReducer delegates states to reducer function
+// - unlike use state, which directly updates the state, useReducer (delegates states to reducer function)
 
 // Understanding useReducer Hook
 // The useReducer hook is an alternative to useState for managing complex state logic in React. It takes in:
