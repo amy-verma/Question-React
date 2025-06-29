@@ -59,3 +59,52 @@ const App=()=>{
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+import { useReducer } from "react";
+
+const App = () => {
+  const initialState = { age: 23, email: "abcd" };
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "Increment":
+        return { ...state, age: state.age + 1 };
+      case "Change_Email":
+        return { ...state, email: action.value };
+      default:
+        return state;
+    }
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <>
+      <p>{`Hello your age ${state.age}`}</p>
+      <p>{`Hello your email ${state.email}`}</p>
+      <button
+        onClick={() => {
+          dispatch({ type: "Increment" });
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: "Change_Email", value: "wasd" });
+        }}
+      >
+        Change Email to wasd
+      </button>
+    </>
+  );
+};
+export default App;
