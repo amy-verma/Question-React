@@ -96,3 +96,9 @@ dispatch(addItem("pizza"))
 payload:"pizza"//so whenever u'll dispatch the action redux will create a object and it will
 create a payload inside the object and it will add whatever data you have added and it will take this object and pass it as the second object on the create slice page
 }
+
+Main Componenets of Redux
+
+1. Store
+2. Action
+3. Reducer
