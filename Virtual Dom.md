@@ -1,3 +1,16 @@
+Question 1. Why does React need a virtual DOM?(Piyush)
+
+- React uses virtual dom to make update  to the real dom faster and more efficient, by minimizing the number of direct DOM manipulation.
+
+🧩 First: What's the DOM?
+- DOM(Document Object Model) is the browser internal representaion of the page
+- Updating the DOM (addd elemets and changing the text) is 
+1. Powerful
+2. ❌ Slow and expensive,
+
+So What Is the Virtual DOM? .....
+
+
 1. What is the Virtual DOM, and how does it work in React?
 - Virtaul DOM helps to improve performance and enhance userExperience.
      How it works:-
