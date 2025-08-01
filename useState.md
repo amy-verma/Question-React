@@ -73,7 +73,7 @@ setCount(prevCount=>prevCount+1)
 
 Now, count will increase correctly by 3.
 ---------------------------------------------------------------------------------------------------
-6. Does useState update the state immediately?
+6. Does useState update the state immediately?(Piyush)
 ❌ No! useState updates the state asynchronously. The new state value is not available immediately after calling setState().
 
 const [count, setCount] = useState(0);
@@ -82,6 +82,20 @@ const handleClick = () => {
   setCount(count + 1);
   console.log(count); // Still logs the old value because update is async!
 };//🔹 To get the updated value immediately, use useEffect or functional updates.
+
+- When you call setState (e.g. setCount), React schedules a re-render, but does not update the state variable immediately in your current function.
+
+✅ How to handle this properly
+
+1. Use the updater function
+setCount(prev => prev + 1);
+This ensures that you're working with the latest state, especially important in loops or async logic.
+
+2. Use useEffect if you need to act on updated state
+useEffect(() => {
+  console.log("Count updated:", count);
+}, [count]);
+
 --------------------------------------------------------------------------------------------------
 7. What is the initial state of useState when given a function?
 ✅ Answer:

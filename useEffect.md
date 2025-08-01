@@ -6,12 +6,6 @@
  3. Subscribing to or cleaning up event listners 
  4. Starting or clearing intervals
 
-
-
- Example- 
- useEffect(()=>{
-
- },[])//here the useEffect runs only when the coponents mounts
 ---------------------------------------------------------------------------------------------------------------------
 2️⃣ When does useEffect run?
 
@@ -135,11 +129,7 @@ useEffect(() => {
 }, []);
 ✅ Now, the event listener is removed when the component unmounts.
 ----------------------------------------------------------------------------------------------------------
-🔟 What are some common mistakes with useEffect?
-❌ Forgetting the dependency array → Causes unnecessary re-renders.
-❌ Modifying state inside useEffect without dependencies → Leads to an infinite loop.
-❌ Using an async function directly in useEffect → Use a separate async function instead.
-❌ Not cleaning up side effects → Can cause memory leaks.
+
 
 11. Bonus Question: How can you optimize performance in useEffect?
 - use the dependency array ([]) to prevent unnecessary execution.
@@ -147,7 +137,39 @@ useEffect(() => {
 3. Use the cleanup function to prevent memory leaks
 
 
+Question 1.What's the difference between useEffect and useLayoutEffect?(Piyush)
+- | Hook              | When It Runs                  | Blocking Paint? | Use Case                                     |
+| ----------------- | ----------------------------- | --------------- | -------------------------------------------- |
+| `useEffect`       | **After** the DOM is painted  | ❌ No            | Side effects like data fetching, logging     |
+| `useLayoutEffect` | **Before** the DOM is painted | ✅ Yes           | Measuring layout, synchronously changing DOM |
 
+
+- Key Differences
+1. Timing
+- useEffect runs : After the component is rendered and painted on the screen
+- useLayoutEffect: Runs after render but before paint, blocking the browser from painting until it’s done.
+
+2. Visual Impact
+- useEffect is async-ish
+- useLayoutEffect is sync
+
+✅ When to use which?
+1. API calls
+
+2. Subscriptions
+
+3. Logging
+
+4. Timers (setTimeout, setInterval)
+
+5. Updating non-layout state
+
+
+Use useLayoutEffect for:
+
+1. Measuring layout (getBoundingClientRect)
+2. Scroll position
+3. Synchronous DOM mutations (setting scroll, focus, etc.)
 
 
 
