@@ -102,3 +102,31 @@ Main Componenets of Redux
 1. Store
 2. Action
 3. Reducer
+
+Question 1. 15. Why did you choose Redux over Context API?
+
+- i choose redux over context api because the application requires centralized, prdictable
+state management, advanced tooling like time-travel debugging and middleware support(for async optn),which Context API alone doesn't provide efficiently at scale.
+
+
+| Feature                        | Context API                              | Redux                                     |
+| ------------------------------ | ---------------------------------------- | ----------------------------------------- |
+| Purpose                        | Prop drilling replacement (static state) | Global state container (dynamic state)    |
+| Built-in Middleware            | ❌ No                                     | ✅ Yes (e.g., `redux-thunk`, `redux-saga`) |
+| Debugging Tools                | ❌ Minimal                                | ✅ DevTools with time travel, tracing      |
+| Performance (frequent updates) | ❌ May trigger unnecessary re-renders     | ✅ Fine-grained control with reducers      |
+| Boilerplate / Complexity       | ✅ Simple to start                        | ❌ More setup (but scalable)               |
+| Community & Ecosystem          | 👎 Smaller                               | 👍 Large, well-tested ecosystem           |
+
+
+🧰 When to Prefer Redux
+- Complex app app state (authentication, user roles , pagination, async data fetching)
+- Shared state across many components
+- Need for middleware(logging,caching,async flows)
+- Time-travel debugging
+
+🚫 Why Not Just Context?
+- Context re-renders all consumers whenever the context value changes—even if they don’t use the part that changed.
+- No built-in way to handle side effects, async flows, or undo/redo logic.
+- Harder to manage large-scale state trees.
+
