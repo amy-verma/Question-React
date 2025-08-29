@@ -103,7 +103,7 @@ Main Componenets of Redux
 2. Action
 3. Reducer
 
-Question 1. 15. Why did you choose Redux over Context API?
+Question 1. 15. Why did you choose Redux over Context API?(Piyush)
 
 - i choose redux over context api because the application requires centralized, prdictable
 state management, advanced tooling like time-travel debugging and middleware support(for async optn),which Context API alone doesn't provide efficiently at scale.

@@ -87,3 +87,26 @@ function App() {
 //     <About/>
 // </Suspense>
 // This tells the React to load the component only when needed
+
+// ✅ Why Implement Lazy Loading for Images? (Piyush)
+// -  1. Improves Initial Page Load Speed
+
+// Without lazy loading, the browser tries to load all images immediately, even those far down the page.
+// With lazy loading, images are only loaded when they’re about to enter the viewport (i.e., become visible).
+// 🏎️ Faster load = better user experience and lower bounce rates.
+
+//  2. Reduces Bandwidth Usage
+//  - Saves mobile data and speeds up browsing for users on slow connections.
+
+// 3. Enhances Performance Metrics (LCP, FCP, etc.)
+// Lazy loading improves Core Web Vitals like:
+// LCP (Largest Contentful Paint)
+// FCP (First Contentful Paint)
+// TTI (Time to Interactive)
+
+// 4. Improves Server Load Efficiency
+
+// 5. Better UX on Long or Image-Heavy Pages
+// Users can interact with content sooner.
+// Scroll feels smoother without waiting for massive images to load.
+

@@ -42,7 +42,7 @@ export default App;
 // UNCONTROLLED COMPONENT 
 // 1. In uncontrolled componenet the data is controlled by DOM Element 
 //2.To write uncontrolled componenet instead of writting an event handler for every state update, you can use a ref
-to get form valueesfrom the DOM
+// to get form valueesfrom the DOM
 
 
 
