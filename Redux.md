@@ -49,7 +49,6 @@ return(
    import {createSlice} from "@reactjs/toolkit"
 
 const cartSlice=createSlice({
-reducer:{
 name:'cart',
 initialState:{
 item:[]
@@ -63,7 +62,6 @@ state.item.pop(item.payload)
 },
 clearCart:(state)=>{
 return {item:[]}
-}
 }
 }
 })
