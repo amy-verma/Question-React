@@ -1,3 +1,5 @@
+1. Click on the add button->It will dipatch an action->call a reducer function->which updates the slice of the Redux store->Then the header component is subscribed using a selector-UI will be got updated automatically
+
 - React Redux is a library that helps manage application state in React apps using Redux,
 - A predictable state container
 - It allows your componenets to access and update the global state in a cleanand structured way.
